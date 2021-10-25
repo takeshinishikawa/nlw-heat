@@ -1,0 +1,82 @@
+/*CSS - Cascading Style Sheet*/
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --grey: hsl(240, 9%, 89%); /*define a cor cinza*/
+  --black: hsl(240, 6%, 13%); /*define a cor preta*/
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif; /*utiliza a fonte roboto definida no index atraves de link do google fonts*/
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.png);
+  width: 375px;
+  height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span {
+  position: absolute; /*prioriza o selo como item mais importante*/
+  top: -15px;
+  z-index: 1; /*coloca o sele na frente em nivel de profundidade*/
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  /*https: //bennettfeely.com/clippy/ -> buscar configuracao do poligono da foto*/
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+  list-style: none; /*tira as bolinhas de listagem*/
+  padding: 0;
+  display: flex;
+  flex-direction: line;
+  gap: 0.5rem;
+  justify-content: center; /*deixa a lista em horizontal*/
+}
